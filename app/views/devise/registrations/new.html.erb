@@ -1,0 +1,27 @@
+<%
+  title t('pages.signup.title')
+%>
+<h2>Sign up</h2>
+
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%- unless resource.valid? %>
+    <div class="alert alert-error">
+      <a class="close" data-dissmiss="alert">x</a>
+      <%= t('pages.signup.flash.error') %>
+    </div>
+  <%- end%>
+  <%%>
+  <div><%= f.label :username %><br />
+  <%= f.text_field :username, :autofocus => true %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>

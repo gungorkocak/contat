@@ -2,37 +2,51 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'sqlite3'
 
-
-# Gems used only for assets and not required
-# in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # If you haven't got node.js runtime installed, you need to un comment this.
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :development do
+	# comment this if you are not on OSX.
+	gem 'rb-fsevent', require: false
+	
+	gem 'guard'             # for easy development
+	gem 'guard-livereload'
+	gem 'guard-rspec'
+
+	gem 'quiet_assets'      # goddamn webrick assets complains!
+
+  gem 'better_errors'     # must to have
+	gem 'binding_of_caller'
+	gem 'meta_request'
+
+	gem 'bullet'            # for N+1 and counter cache improvments
+end
+
+group :test do
+	gem 'shoulda'
+	gem 'shoulda-matchers'
+	gem 'mocha'
+	gem 'capybara'
+	gem 'launchy'
+end
+
+group :development, :test do 
+	gem 'rspec-rails'
+	gem 'factory_girl_rails'
+end
+
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'haml'
+gem 'haml-rails'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+gem 'devise'
