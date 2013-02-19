@@ -5,15 +5,17 @@
 
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%- unless resource.valid? %>
+  <%- if resource.errors.any? %>
     <div class="alert alert-error">
       <a class="close" data-dissmiss="alert">x</a>
       <%= t('pages.signup.flash.error') %>
     </div>
   <%- end%>
-  <%%>
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username, :autofocus => true %></div>
+  <div>
+    <%= f.label :username %>
+    <br />
+    <%= f.text_field :username %>
+  </div>
 
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>

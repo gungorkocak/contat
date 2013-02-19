@@ -1,6 +1,6 @@
 %nav.navbar
   .navbar-inner
     %section.sign-in.pull-right
-      .sign-in-text= I18n.t('pages.sign_in_text')
-      = link_to I18n.t('pages.sign_in_button'), new_user_session_path
+      %span.sign-in-text= I18n.t('pages.sign_in_text')
+      = link_to I18n.t('pages.sign_in_button'), new_user_session_path, class: "btn btn-success"
     

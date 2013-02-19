@@ -716,17 +716,17 @@ address {
 }
 @font-face {
   font-family: MetroReg;
-  src: font-path('metro-font-regular.woff');
+  src: url(font-path('metro-font-regular.woff'));
   font-weight: 400;
 }
 @font-face {
   font-family: MetroBold;
-  src: font-path('metro-font-medium.woff');
+  src: url(font-path('metro-font-medium.woff'));
   font-weight: 400;
 }
 @font-face {
   font-family: MetroBlack;
-  src: font-path('metro-font-black.woff');
+  src: url(font-path('metro-font-black.woff'));
   font-weight: 400;
 }
 code,

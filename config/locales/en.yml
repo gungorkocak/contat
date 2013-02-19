@@ -212,7 +212,7 @@ en:
       title: 'ContAT, Yet Another Contact Application'
       call_to_action:
         start: 'Start using'
-        message: 'ContAT, turdy, and sprankly friendly contact app.'
+        message: 'Frankly, turdy, and sprankly friendly contact app.'
 
     signin:
       submit: 'Sign in'

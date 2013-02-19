@@ -1,0 +1,31 @@
+body { background: image-url('light_wool.png'); }
+
+.call-to-action {
+  
+   text-align: center;
+        color: white;
+   background: rgb(42,42,42);
+      padding: 100px 0 0 0;
+
+  @include single-box-shadow;
+
+
+  h1          { font-size: 60px; }
+  .message    { font: normal 32px/40px MetroReg; }
+  .title      { padding: 20px; }
+
+
+  .btn-large { 
+    font-size: 24px;
+      padding: 16px 28px 15px;
+       margin: 26px 0;
+  }
+
+}
+
+
+footer { 
+  text-align: center; 
+   font-size: 1.2em; 
+     padding: 20px;
+}

@@ -8,3 +8,10 @@
 // Include font awesome for icons
 @import 'font-awesome';
 
+// Include compass framework for handy-stuff
+@import 'compass';
+
+// Include pages#landing specifics
+@import 'landing/navbar';
+@import 'landing/base';
+@import 'landing/features';
