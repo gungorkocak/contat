@@ -216,6 +216,8 @@ en:
 
     signin:
       submit: 'Sign in'
+      flash:
+        error: 'Username of password is invalid'
     
     signup:
       submit: 'Sign up'
