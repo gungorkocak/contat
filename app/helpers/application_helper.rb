@@ -8,4 +8,12 @@ module ApplicationHelper
     
     raw content_tag(:span, content.first, class: "error")
   end
+
+  def current_path
+    request.env['PATH_INFO']
+  end
+
+  def current_path?(path)
+    path == current_path
+  end
 end
