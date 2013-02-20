@@ -1,21 +1,11 @@
 section.form {
-  $form-width:   300px;
-  $form-padding: 20px;
 
    max-width: $form-width;
       margin: 40px auto;
-  background: adjust-lightness(rgb(42, 42, 42), 120);
+  background: adjust-lightness($black-background, 120);
      padding: $form-padding;
 
-    // @todo: extract mixin to utils mixin partial
-  @mixin input-content-fix {
-       -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
 
-  // @todo: extract global variable to variables partial
-  $red: #a31a3f;
 
   input {
      width: 100%;

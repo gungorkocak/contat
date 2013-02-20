@@ -1,0 +1,6 @@
+
+// normalize/customize unnecessary bootstrap turds.
+nav > .navbar-inner { padding: 10px 40px; }
+nav   .btn          { margin-top: 0 !important; }
+nav   .status       { padding-top: 5px; }
+nav   .status-text  { vertical-align: middle; }

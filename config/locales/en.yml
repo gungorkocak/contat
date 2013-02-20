@@ -208,6 +208,7 @@ en:
   pages:
     sign_in_text: 'Already signed up?'
     sign_in_button: 'Sign in'
+    sign_out_button: 'Sign out'
     landing:
       title: 'ContAT, Yet Another Contact Application'
       call_to_action:
@@ -218,9 +219,18 @@ en:
       submit: 'Sign in'
       flash:
         error: 'Username of password is invalid'
+        unauthorized: 'You must sign in first'
     
     signup:
       submit: 'Sign up'
       title: 'One step to using ContAT'
       flash:
         error: 'You err!'
+
+    contacts:
+      title: 'ContAT, now rule your Contats!'
+      nav:
+        status_text: "Welcome to contAT, %{username}"
+      sidebar:
+        header: "Your Contats"
+        import_xml_button: "Import Contacts(XML)"
