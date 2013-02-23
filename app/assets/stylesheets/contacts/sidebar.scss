@@ -1,0 +1,25 @@
+aside.sidebar {
+      h2, h3, h4, h5 { font-family: $light-font-family; }   
+
+   max-width: 260px !important;
+   min-width: 260px !important;
+     padding: $global-padding;
+  background: image-url('stressed_linen.png') top left;
+      height: 100%; 
+    position: absolute;
+       color: $white;
+
+
+  header, footer { 
+    position: absolute; 
+       width: 260px; 
+  }
+  
+  header { top:    $global-padding; margin-left: 0; }
+  footer { bottom: $global-padding; margin-left: 0; }
+
+  footer {
+    background: image-url('stressed_linen.png') top left;
+
+  }
+}

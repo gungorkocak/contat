@@ -3,11 +3,14 @@
 // !Heads up. Any changes on these variables may change plenty of visuals application-wide.
 //   Please use extreme caution.
 
-$red: #a31a3f;
-
+$red:   #a31a3f;
+$white: white;
 
 $black-background: rgb(42, 42, 42);
 
+$global-padding: 20px;
 
 $form-width:   300px;
 $form-padding: 20px;
+
+$light-font-family: 'MetroReg', 'Helvetica Neue', 'Open Sans', 'Proxima Nova', 'Helvetica', 'Arial', sans-serif;

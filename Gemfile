@@ -38,6 +38,8 @@ group :test do
 	gem 'mocha'
 	gem 'capybara'
 	gem 'launchy'
+	gem 'json_spec'
+	gem 'faker'
 end
 
 group :development, :test do 

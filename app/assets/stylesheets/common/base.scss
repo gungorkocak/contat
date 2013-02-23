@@ -1,6 +1,14 @@
 
 // normalize/customize unnecessary bootstrap turds.
-nav > .navbar-inner { padding: 10px 40px; }
-nav   .btn          { margin-top: 0 !important; }
-nav   .status       { padding-top: 5px; }
-nav   .status-text  { vertical-align: middle; }
+
+nav { 
+  vertical-align: middle; 
+   margin-bottom: 0 !important;
+
+  .navbar-inner { padding: 10px 40px; }
+  .btn          { margin-top: 0 !important; }
+  .status       { padding-top: 5px; }
+  .status-text  { vertical-align: middle; }
+
+  @include single-box-shadow;
+}
