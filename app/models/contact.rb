@@ -9,6 +9,8 @@ class Contact < ActiveRecord::Base
   
 
   # SCOPES
+  default_scope order("name ASC, last_name ASC")
+
   module ImportManager
 
     # Reads xml string from Uploaded File.

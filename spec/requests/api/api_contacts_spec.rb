@@ -30,7 +30,9 @@ describe "Api::Contacts" do
 
       it "contains all of the related contacts" do
         visit api_contacts_path
-        page.body.to_json.should include_json(contacts.to_json.to_json)
+        contacts = user.contacts.scoped.to_json
+        page.body.to_json.should include_json(contacts.to_json)
+
       end
 
       it "doesn't contain any of the unrelated contacts" do
