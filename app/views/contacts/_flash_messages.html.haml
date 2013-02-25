@@ -1,0 +1,6 @@
+- if flash.any?
+  - flash_class = flash[:alert].present? ? "alert alert-error" : "alert"
+  
+  %div{ class: flash_class }
+    %a.close{ "data-dismiss" => "alert" } x
+    = flash[:alert] || flash[:notice]

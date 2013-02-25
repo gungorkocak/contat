@@ -1,0 +1,6 @@
+- type        ||= :text_field
+- field_class   = resource.errors[attr.to_sym].any? ? "error" : nil
+%div
+  = print_errors_for(resource, attr)
+  = f.send(:label, attr.to_sym)
+  = f.send(type.to_sym, attr.to_sym)

@@ -1,0 +1,9 @@
+// Application-wide mixins and reusables goes here.
+
+
+// fix width 100% with inputs issue.
+@mixin input-content-fix {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
