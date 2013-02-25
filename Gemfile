@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 
-gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -47,6 +47,11 @@ end
 group :development, :test do 
 	gem 'rspec-rails'
 	gem 'factory_girl_rails'
+end
+
+group :production do
+	gem 'thin'
+	gem 'pg'
 end
 
 gem 'jquery-rails'
