@@ -24,6 +24,12 @@ class User < ActiveRecord::Base
   def find_contact(id); contacts.where(id: id).first end 
 
 
+  # BUILD METHODS
+  def import_from(file)
+    Contact.import_from(file, self)
+  end
+
+
   # HACKS TO GET DEVISE USERNAME AUTH WORKING 
   def email_required?; false end
   def email_changed?; false end

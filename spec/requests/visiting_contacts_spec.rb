@@ -45,7 +45,7 @@ describe "VisitingContacts", integration: true do
         page.should have_content(I18n.t('pages.contacts.sidebar.header'))
         page.should have_selector('.contacts-add')
         page.should have_selector('#contacts')
-        page.should have_selector('.import-xml')
+        page.should have_selector('.import-contacts')
       end
     end
 

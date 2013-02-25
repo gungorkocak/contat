@@ -1,8 +1,5 @@
 // Comtacts specific styles goes here.
 
-// @todo extract variables to common/_variables
-$navbar-height: 66px;
-
 
 html { height: 100% }
 body { height: 100% }
@@ -16,7 +13,7 @@ nav.navbar {
 
 .row-fluid { 
        height: 100%;
-  padding-top: $navbar-height;
 }
 
 @import 'contacts/sidebar';
+@import 'contacts/show';

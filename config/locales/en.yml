@@ -234,3 +234,7 @@ en:
       sidebar:
         header: "Your Contats"
         import_xml_button: "Import Contacts(XML)"
+      import:
+        flash:
+          notice: 'Yey! Your contacts have been imported.'
+          alert: "Sorry :/ We couldn't import your contacts. Be sure your file is not corrupted."

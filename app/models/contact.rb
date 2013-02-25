@@ -1,12 +1,50 @@
 class Contact < ActiveRecord::Base
   
-  # ACCESSIBLES & SCOPES
+  # ACCESSIBLES 
   attr_accessible :name, :last_name, :phone
 
 
   # ASSOCIATIONS
   belongs_to :user
   
+
+  # SCOPES
+  module ImportManager
+
+    # Reads xml string from Uploaded File.
+    def parsed_xml(file)
+      file.read
+    end
+
+    # Takes xml string, converts to hash, and
+    # fetches necessary contacts collection from that hash.
+    def contacts_from_xml(xml)
+      Hash.from_xml(xml)["contacts"]["contact"]
+    end
+
+    # Given a newly parsed hash that consists camelCase keys,
+    # sanitizes hash by converting its keys :to_underscore_symbols
+    def sanitize(contacts)
+      contacts.map do |contact|
+        Hash[contact.map { |key, value| [ key.underscore.to_sym, value ] }]
+      end
+    end
+  end
+
+  extend ImportManager
+
+
+  def self.import_from(xml_file, user)
+    xml           = parsed_xml(xml_file)
+    contacts_hash = contacts_from_xml(xml)
+    contacts      = sanitize(contacts_hash)
+
+    Contact.create(contacts) do |contact|
+      contact.user = user
+    end
+
+  end
+
 
   # VALIDATIONS
   validates  :user, presence: true

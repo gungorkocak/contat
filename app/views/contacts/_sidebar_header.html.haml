@@ -1,0 +1,27 @@
+%header
+  %h4
+    = t('pages.contacts.sidebar.header')
+
+    -# menu to add contacts
+    %span.add-menu.button-group
+
+      %a.contacts-add.btn.btn-primary{ href: "#" }
+        %i.icon-plus
+        Add 
+
+      %a.add-submenu-btn.btn.btn-primary.dropdown-toggle{ "data-toggle" => "dropdown", href: "#" }
+        %span.caret
+
+      -# submenu for importing xml    
+      %ul.submenu.dropdown-menu
+        %li 
+          %a#import-contacts-link{ href: "#" }
+            %i.icon-pencil 
+            = t('pages.contacts.sidebar.import_xml_button')
+
+          -# hidden form_field for file upload
+          = form_tag import_contacts_path, multipart: true, class: "import-contacts", style: "visibility: hidden; display: none;" do
+            = file_field_tag "contacts"
+            = submit_tag "Import Contacts From XML", id: "import-contacts-submit"
+
+

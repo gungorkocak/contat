@@ -33,6 +33,19 @@ class ContactsController < ApplicationController
     respond_with(@contact)
   end
 
+
+  def import
+    @contacts = current_user.import_from(params[:contacts])
+
+    flash[:notice] = I18n.t('pages.contacts.import.flash.notice')
+
+    respond_with(@contacts, location: contacts_path)
+  
+  rescue REXML::ParseException
+    redirect_to contacts_path, alert: I18n.t('pages.contacts.import.flash.alert')
+  end
+
+
   protected
 
 

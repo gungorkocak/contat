@@ -97,4 +97,10 @@ describe Contact do
       end
     end
   end
+
+  describe "importing contacts" do
+    it "adds all of the contacts properly"
+    it "doesn't add any contact without user"
+    it "ignores extra attributes but saves knowns"
+  end
 end
