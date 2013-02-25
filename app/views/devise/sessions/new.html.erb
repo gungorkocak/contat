@@ -6,9 +6,9 @@
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <%- if resource.errors.any? || flash.any? %>
-    <div class="alert alert-error">
+    <div class="alert <%= flash[:alert].present? ? "alert-error" : "" %>">
       <a class="close" data-dismiss="alert">x</a>
-      <%= t('pages.signin.flash.error') %>
+      <%= flash[:alert] || flash[:notice] %>
     </div>
   <%- end %>
 

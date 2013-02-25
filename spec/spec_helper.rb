@@ -8,7 +8,7 @@ require 'capybara/rspec'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
-  config.mock_with :mocha
+  # config.mock_with :mocha
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   config.use_transactional_fixtures = true
@@ -22,4 +22,7 @@ RSpec.configure do |config|
   config.include Sprockets::Helpers::IsolatedHelper, type: :request
   config.include DeviseMacros, type: :request
   config.include AssetSpecs, type: :request
+  config.include JsonSpec::Helpers, type: :request
+  config.include ContAT::ApiMacros, type: :request
+
 end

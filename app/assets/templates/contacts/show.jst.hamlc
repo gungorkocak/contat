@@ -1,0 +1,24 @@
+
+%form#contact-form
+  .name.item
+    %i.icon-user
+    %input#name{      type: "text", value: @contact?.get('name'), placeholder: "Name" }
+    %i.status.icon-edit
+    %em.error
+
+  .last_name.item
+    %i.icon-asterisk
+    %input#last_name{ type: "text", value: @contact?.get('last_name'), placeholder: "Last Name" }
+    %i.status.icon-edit
+    %em.error
+
+  .phone.item
+    %i.icon-phone
+    %input#phone{     type: "text", value: @contact?.get("phone"), placeholder: "Phone" }
+    %i.status.icon-edit
+    %em.error
+
+- if @contact.isNew()
+  .submit.btn.btn-large.btn-success 
+    Save
+    %i.icon-signin
