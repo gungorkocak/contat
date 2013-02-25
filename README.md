@@ -1,17 +1,32 @@
-### TODO:
+## ContAT, frankly, turdy, and sprankly friendly contact app.
 
-  - Document initial setup, running and flow of application.
+#### Disclosure
+
+I know deadline has taken the horse and passed through Uskudar, 
+but I enjoyed the development, learned some new bunch of stuff, and satisfied with the result. 
+Although there are plenty of things to improve, I think current state will be just enough.
+
+I have noted the things that I would do next if this was a long-term project below, please check by.
+
+#### Getting Started
+
+Bootstraping application is pretty straightforward. There is no external dependency.
+
+- Clone repository; `git clone https://github.com/monkegjinni/contat.git`
+- Cd into it;	  `cd contat`
+- Bootstrap;	  `bundle install && rake db:migrate`
+- Run tests;	  `rake db:test:prepare && rspec`
+- Run server;	  `rails s`
 
 
-  - Add metrostrap javascript files
-	- Add font awesome and its dependencies (with its lt ie7 dependency)
-	- add title functionality
-	- add basic landing page html elements by doing bdd
-	- add devise with user name, bdd its sign_in and signup pages.
-	- add main contacts controller and index logic
-	- test signing in and up processes
-	- design landing page and sign-in , up pages.
-	- test flash messages withing signin and out.
+#### Further Improvements
 
-	- implement basic contact page, and design it.
-	- add backbone to the bones.
+* More test coverage for importing contacts from file.
+* Add async js integrations tests that covers front-end backbone functionality.
+* Cleanup unused metrostrap styles.
+* Refactor inline modules at Contact Model to their own files.
+* Improve UX on updating contacts.
+* Start to write chef and capistrano recipes for early-stage environment.
+
+
+### Ok, Hope that It's not too late. Just Don't Panic!
