@@ -6,7 +6,7 @@ I know deadline has taken the horse and passed through Uskudar,
 but I enjoyed the development, learned some new bunch of stuff, and satisfied with the result. 
 Although there are plenty of things to improve, I think current state will be just enough.
 
-I have noted the things that I would do next if this was a long-term project below, please check by.
+I have noted the things that I would do next if this was a long-term project, please check by.(below)
 
 #### Getting Started
 
