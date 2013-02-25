@@ -1,0 +1,14 @@
+en:
+  api:
+    errors:
+      unauthorized: "You aren't authorized to do that. First, signin or signup"
+
+  flash:
+    actions:
+      create:
+        notice: "%{resource} is successfully created"
+      update:
+        notice: "%{resource} is successfully updated"
+      destroy:
+        notice: "%{resource} is successfully destroyed"
+        alert: "%{resource} could not be destroyed"

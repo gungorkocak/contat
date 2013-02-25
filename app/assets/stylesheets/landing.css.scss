@@ -11,6 +11,9 @@
 // Include compass framework for handy-stuff
 @import 'compass';
 
+// Include application-wide styles, mixins, and variables
+@import 'common';
+
 // Include pages#landing specifics
 @import 'landing/navbar';
 @import 'landing/base';
@@ -18,3 +21,4 @@
 
 // Include user_registrations#new and user_sessions#new specifics
 @import 'user/base';
+

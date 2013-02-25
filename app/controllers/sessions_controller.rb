@@ -4,8 +4,8 @@ class SessionsController < Devise::SessionsController
   # POST /users/sign_in
   def create
     unless self.resource = warden.authenticate(auth_options)
-      self.resource = User.new  # give a newborn User for form control
-      flash[:alert] = I18n.t('pages.signin.flash.error')
+      self.resource   = User.new  # give a newborn User for form control
+      flash[:alert]   = I18n.t('pages.signin.flash.error')
       render :new and return
     end
 
@@ -14,6 +14,5 @@ class SessionsController < Devise::SessionsController
     respond_with resource, :location => after_sign_in_path_for(resource)
   end
 
-  private
 
 end

@@ -1,0 +1,7 @@
+%nav.navbar
+  .navbar-inner
+    %section.status.pull-right
+      %span.sign-out-text.status-text= t('pages.contacts.nav.status_text', username: current_user.username)
+      = link_to t('pages.sign_out_button'), destroy_user_session_path, method: :delete, class: "btn"
+
+
