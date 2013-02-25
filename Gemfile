@@ -12,7 +12,9 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-	gem 'compass-rails'
+  gem 'compass-rails'
+
+  gem 'haml_coffee_assets'
 end
 
 group :development do
@@ -25,7 +27,7 @@ group :development do
 
 	gem 'quiet_assets'      # goddamn webrick assets complains!
 
-  gem 'better_errors'     # must to have
+  	gem 'better_errors'     # must to have
 	gem 'binding_of_caller'
 	gem 'meta_request'
 
@@ -38,6 +40,8 @@ group :test do
 	gem 'mocha'
 	gem 'capybara'
 	gem 'launchy'
+	gem 'json_spec'
+	gem 'faker'
 end
 
 group :development, :test do 
@@ -51,3 +55,5 @@ gem 'haml'
 gem 'haml-rails'
 
 gem 'devise'
+
+gem 'backbone-on-rails'

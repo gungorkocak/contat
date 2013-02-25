@@ -1,2 +1,6 @@
-%h1 Contacts#index
-%p Find me in app/views/contacts/index.html.haml
+-# set proper title for contacts page
+- title t('pages.contacts.title')
+
+.row-fluid
+  = render 'contacts/sidebar'
+  = render 'contacts/show'

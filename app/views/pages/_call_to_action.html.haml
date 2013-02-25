@@ -1,0 +1,7 @@
+.call-to-action.masthead
+  .container
+    %h1.title ContAT
+    %h3.message= t('pages.landing.call_to_action.message')
+    = link_to new_user_registration_path, class: "btn btn-warning btn-large" do
+      = t('pages.landing.call_to_action.start')
+      %i.icon-double-angle-right

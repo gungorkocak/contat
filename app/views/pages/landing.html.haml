@@ -1,34 +1,8 @@
 -# set proper title for landing page
 -  title t('pages.landing.title')
 
-.call-to-action.masthead
-  .container
-    %h1.title ContAT
-    %h3.message= t('pages.landing.call_to_action.message')
-    = link_to new_user_registration_path, class: "btn btn-warning btn-large" do
-      = t('pages.landing.call_to_action.start')
-      %i.icon-double-angle-right
+= render :partial => 'pages/call_to_action'
 
-.features.container
-  .row-fluid
-
-    .feature.frankly.span4
-      .icon-bookmark
-      %h3 Wait for franks to come you.
-      %p
-        Dont ever mention it.. 
-        While you are away and maybe turding contAT makes your contacts as a valuable franking machine. It's like rainbows! 
-
-    .feature.turdly.span4
-      .icon-cloud
-      %h3 Turding was never as easy before.
-      %p
-        Turding is the hardest thing when you are adding someone to your personal life. Just add contacts that you have just met, and live us the propagation of your battlecry turdings.
-
-    .feature.friendly.span4
-      .icon-legal
-      %h3 Your friends will bow to your friendliness.
-      %p
-        Being a respectful friend is hard. We will give you the wings of Kahta to relief you from your burden. Only thing that up to you is Divide & Conquer your contacts.
+= render 'pages/features'
 
 %footer contAT Inc. &copy; 2013

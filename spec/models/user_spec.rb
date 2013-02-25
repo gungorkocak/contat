@@ -2,8 +2,11 @@ require 'spec_helper'
 
 describe User do
 
+  it { should have_many(:contacts).dependent(:destroy) }
+
   context "#username" do
     subject { FactoryGirl.build(:user, password: "naberullah", password_confirmation: "naberullah") }
+
     it { should validate_presence_of(:username) }
     it { should validate_uniqueness_of(:username) }
     it { should_not allow_value("sdf$^%&*()!$").for(:username) }
@@ -20,4 +23,5 @@ describe User do
       user.should_not be_valid
     end
   end
+
 end
