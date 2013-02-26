@@ -18,7 +18,7 @@ class Contat.Routers.Contacts extends Backbone.Router
     @fetchContacts()
     @index_view   = new Contat.Views.ContactsIndex(collection: @collection)
 
-    @index_view.render()
+    # @index_view.render()
 
 
   fetchContacts: ->
