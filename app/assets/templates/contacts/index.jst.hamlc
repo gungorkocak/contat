@@ -1,5 +1,6 @@
-- if @collection.models.length is 0
+- unless @contacts?.models.length > 0
   It seems you dont have any contacts. 
   Add one by clicking 'Add' button or
   import your contacts by clicking
   Dropdown near 'Add' Button.
+

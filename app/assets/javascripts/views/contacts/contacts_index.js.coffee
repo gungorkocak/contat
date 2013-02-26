@@ -14,8 +14,8 @@ class Contat.Views.ContactsIndex extends Backbone.View
 
 
   render: =>
-    $(@el).html( @template() )
-    $("ul#contacts").replaceWith( @el )
+    $(@el).html( @template(contacts: @collection) )
+    $("ul#contacts").replaceWith( @el ) 
 
     @collection.each( @appendContact )
 
